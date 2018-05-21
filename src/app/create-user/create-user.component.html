@@ -1,0 +1,42 @@
+<main flex>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-7">
+        <mat-card class="card_create mat-elevation-z8">
+          <mat-card-title style="margin-bottom: 5%;">
+            Cadastrar Usuário
+          </mat-card-title>
+          <mat-card-content>
+            <form #formUser = "ngForm" (ngSubmit) = "createUser(user)">
+              <div class="container_form">
+                <mat-form-field>
+                  <mat-select name="tipo" placeholder="Tipo de usuário" [(ngModel)] = user.tipo required>
+                    <mat-option value="ADMIN">ADMIN</mat-option>
+                    <mat-option value="USER">USER</mat-option>
+                  </mat-select>
+                </mat-form-field>
+                <mat-form-field>
+                  <input maxlength="45" name="nome" matInput placeholder="Nome" [(ngModel)] = user.nome required>
+                </mat-form-field>
+                <mat-form-field>
+                  <input maxlength="45" type="email" name="email" matInput placeholder="E-mail" [(ngModel)] = user.email required email>
+                </mat-form-field>
+                <mat-form-field>
+                  <input maxlength="15" name="username" matInput placeholder="Login" [(ngModel)] = user.username required>
+                </mat-form-field>
+                <mat-form-field>
+                  <input minlength="4" name="password" type="password" matInput placeholder="Senha (Mínimo de 4 caracteres)" [(ngModel)] = user.password required>
+                </mat-form-field>
+                <mat-form-field>
+                  <input minlength="4" name="repeatedPassword" type="password" matInput placeholder="Repita a senha" [(ngModel)] = user.repeatedPassword required>
+                </mat-form-field>
+
+                <button [disabled]="!formUser.valid" type="submit" class="btn btn-primary" style="margin-top: 10%;">Cadastrar</button>
+              </div>
+            </form>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+</main>

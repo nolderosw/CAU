@@ -1,0 +1,14 @@
+.mat-sidenav-container {
+    background: transparent;
+}
+.blank-grow {
+    flex: 1 1 auto;
+}
+.jumbotron{
+    background-color: transparent;
+}
+
+a{
+    color: white;
+    cursor: pointer;
+}

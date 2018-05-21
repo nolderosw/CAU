@@ -1,0 +1,12 @@
+.container_form {
+    display: flex;
+    flex-direction: column;
+}
+  
+.container_form > * {
+    width: 100%;
+}
+.card_create {
+    text-align: center;
+    margin-top: 10%;
+}

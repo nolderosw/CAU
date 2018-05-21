@@ -1,0 +1,17 @@
+<header>
+  <mat-sidenav-container>
+    <mat-toolbar color="primary" style="background-color: transparent">
+      <span><a routerLink="/" style="margin-right: 3%;">CAU - Cadastro de ADMIN e USER</a> </span>
+      <span class="blank-grow"></span>
+
+      <span style="margin-right: 3%;font-size: 18px;"> Bem vindo (a), {{currentUser.nome}}</span>
+      <mat-icon mat-list-icon style="margin-right: 0.5%;">home</mat-icon>
+      <a routerLink="/" style="margin-right: 3%; font-size: 17px;"> Início</a>
+      <mat-icon *ngIf="currentUser.tipo == 'ADMIN'" mat-list-icon style="margin-right: 0.5%;">person_add</mat-icon>
+      <a *ngIf="currentUser.tipo == 'ADMIN'"routerLink="/create" style="margin-right: 3%;font-size: 17px;"> Nova Conta</a>
+      <mat-icon mat-list-icon style="margin-right: 0.5%;">exit_to_app</mat-icon>
+      <a (click) = "logout()" style="font-size: 17px;">Sair</a>
+
+    </mat-toolbar>
+  </mat-sidenav-container>
+</header>

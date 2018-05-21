@@ -1,0 +1,27 @@
+<main flex>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-5">
+        <mat-card class="card_login  mat-elevation-z8">
+          <mat-card-title style="margin-bottom: 5%;">
+            Entrar
+          </mat-card-title>
+          <mat-card-content>
+              <form #formLogin = "ngForm" (ngSubmit) = "login(user)">
+            <div class="container_form">
+              <mat-form-field>
+                <input [(ngModel)] = "user.username" name="username" matInput placeholder="Usuário">
+              </mat-form-field>
+              <mat-form-field>
+                <input [(ngModel)] = "user.password" name="password" type="password" matInput placeholder="Senha">
+              </mat-form-field>
+
+              <button type="submit" class="btn btn-primary" style="margin-top: 10%;">Entrar</button>
+            </div>
+          </form>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+</main>
